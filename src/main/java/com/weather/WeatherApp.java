@@ -37,6 +37,7 @@ public class WeatherApp {
 
     private static JSONObject getCoordinates(String location) throws Exception {
         String apiUrl = "https://api.openweathermap.org/geo/1.0/direct?q=" + location + "&limit=1&appid=" + API_KEY;
+        @SuppressWarnings("deprecation")
         URL url = new URL(apiUrl);
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
         connection.setRequestMethod("GET");
